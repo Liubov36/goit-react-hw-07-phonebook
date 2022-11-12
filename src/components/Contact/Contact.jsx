@@ -1,8 +1,10 @@
 import PropTypes from 'prop-types';
-import { ContactData, Number, Button, Icon } from './Contact.styled';
 import { FaTrash, FaUserTie } from 'react-icons/fa';
 
-export const Contact = ({ name, number, onDeleteContact }) => {
+import { ContactData, Number, Button, Icon } from './Contact.styled';
+
+export const Contact = ({ contactID, name, number, onDeleteContact }) => {
+  console.log('contactID', contactID);
   return (
     <>
       <ContactData>
@@ -13,7 +15,7 @@ export const Contact = ({ name, number, onDeleteContact }) => {
       </ContactData>
       <ContactData>
         <Number>{number}</Number>
-        <Button type="button" onClick={onDeleteContact}>
+        <Button type="button" onClick={() => onDeleteContact(contactID)}>
           <FaTrash />
         </Button>
       </ContactData>
