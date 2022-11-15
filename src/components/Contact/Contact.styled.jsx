@@ -11,14 +11,14 @@ export const Icon = styled.span`
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background-color: #0084ff3d;
+background-color: #0084ff3d;
   margin-right: 15px;
   padding: 5px;
   border-radius: 3px;
   color: #290268;
 `;
 
-export const Number = styled.p`
+export const Phone = styled.p`
   font-weight: 700;
   margin-right: 15px;
 `;
